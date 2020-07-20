@@ -1,6 +1,6 @@
-/// Makes an element's ::before pseudoelement a FontAwesome icon.
+/// Makes an element's ::before pseudoelement a FontAwesome/Academicons icon.
 /// @param {string} $where Optional pseudoelement to target (before or after).
-/// @param {string} $style Which font to use (solid, regular, or brands).
+/// @param {string} $style Which font to use (solid, regular, brands, or academic).
 /// @param {string} $content Optional content value to use.
 @mixin icon($where: before, $style: solid, $content: false) {
 
@@ -15,11 +15,14 @@
 		@if $style == brands {
 			font-family: "Font Awesome 5 Brands";
 		}
+		@else if $style == academic {
+			font-family: "Academicons";
+		}
 		@else {
 			font-family: "Font Awesome 5 Free";
 		}
 
-		@if $style == regular {
+		@if $style == regular or $style == academic {
 			font-weight: 400;
 		}
 		@else {
