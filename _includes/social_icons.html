@@ -1,34 +1,38 @@
 <!-- Social Icons -->
 <ul class="icons">
+  {%- capture soc_target -%}
+    {%- if site.social_newtabs -%} target="_blank" rel="noopener" {%- else -%}{%- endif -%}
+  {%- endcapture -%}
+
   {%- if site.twitter_url -%}
-  <li><a href="{{- site.twitter_url -}}" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li>
+  <li><a href="{{- site.twitter_url -}}" class="icon-b fa-twitter" {{soc_target}}><span class="label">Twitter</span></a></li>
   {%- endif -%}
   {%- if site.facebook_url -%}
-  <li><a href="{{- site.facebook_url -}}" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li>
+  <li><a href="{{- site.facebook_url -}}" class="icon-b fa-facebook-f" {{ soc_target }}><span class="label">Facebook</span></a></li>
   {%- endif -%}
   {%- if site.googleplus_url -%}
-  <li><a href="{{- site.googleplus_url -}}" class="icon-b fa-google-plus-g"><span class="label">Google Plus</span></a></li>
+  <li><a href="{{- site.googleplus_url -}}" class="icon-b fa-google-plus-g" {{ soc_target }}><span class="label">Google Plus</span></a></li>
   {%- endif -%}
   {%- if site.instagram_url -%}
-  <li><a href="{{- site.instagram_url -}}" class="icon-b fa-instagram"><span class="label">Instagram</span></a></li>
+  <li><a href="{{- site.instagram_url -}}" class="icon-b fa-instagram" {{ soc_target }}><span class="label">Instagram</span></a></li>
   {%- endif -%}
   {%- if site.linkedin_url -%}
-  <li><a href="{{- site.linkedin_url -}}" class="icon-b fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+  <li><a href="{{- site.linkedin_url -}}" class="icon-b fa-linkedin-in" {{ soc_target }}><span class="label">LinkedIn</span></a></li>
   {%- endif -%}
   {%- if site.github_url -%}
-  <li><a href="{{- site.github_url -}}" class="icon-b fa-github"><span class="label">GitHub</span></a></li>
+  <li><a href="{{- site.github_url -}}" class="icon-b fa-github" {{ soc_target }}><span class="label">GitHub</span></a></li>
   {%- endif -%}
   {%- if site.stackoverflow_url -%}
-  <li><a href="{{- site.stackoverflow_url -}}" class="icon-b fa-stack-overflow"><span class="label">StackOverflow</span></a></li>
+  <li><a href="{{- site.stackoverflow_url -}}" class="icon-b fa-stack-overflow" {{ soc_target }}><span class="label">StackOverflow</span></a></li>
   {%- endif -%}
   {%- if site.pinterest_url -%}
-  <li><a href="{{- site.pinterest_url -}}" class="icon-b fa-pinterest"><span class="label">Pinterest</span></a></li>
+  <li><a href="{{- site.pinterest_url -}}" class="icon-b fa-pinterest" {{ soc_target }}><span class="label">Pinterest</span></a></li>
   {%- endif -%}
   {%- if site.slack_url -%}
-  <li><a href="{{- site.slack_url -}}" class="icon-b fa-slack-hash"><span class="label">Slack</span></a></li>
+  <li><a href="{{- site.slack_url -}}" class="icon-b fa-slack-hash" {{ soc_target }}><span class="label">Slack</span></a></li>
   {%- endif -%}
   {%- if site.dribbble_url -%}
-  <li><a href="{{- site.dribbble_url -}}" class="icon-b fa-dribbble"><span class="label">Dribbble</span></a></li>
+  <li><a href="{{- site.dribbble_url -}}" class="icon-b fa-dribbble" {{ soc_target }}><span class="label">Dribbble</span></a></li>
   {%- endif -%}
   {%- if site.email -%}
   <li><a href="mailto:{{- site.email -}}" class="icon fa-envelope"><span class="label">Email</span></a></li>

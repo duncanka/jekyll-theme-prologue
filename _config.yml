@@ -56,6 +56,8 @@ pinterest_url:
 slack_url:
 dribbble_url:
 
+social_newtabs: true
+
 # Google Analytics Tracking ID goes here:
 google_analytics:
 
