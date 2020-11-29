@@ -49,4 +49,8 @@
   <!--[if lte IE 8]><script src="{{- 'assets/js/ie/respond.min.js' | relative_url -}}" defer></script><![endif]-->
   <script src="{{- 'assets/js/main.js' | relative_url -}}" defer></script>
 
+  <!-- Favicon -->
+  {%- if site.favicon -%}
+    <link rel="shortcut icon" href="{{- site.favicon -}}" />
+  {%- endif -%}
 </head>
